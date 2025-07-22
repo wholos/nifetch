@@ -3,7 +3,7 @@ import osproc, strutils
 const knownWMs = [
   "i3", "sway", "bspwm", "openbox", "fluxbox", "xmonad", "awesome", "icewm",
   "dwm", "herbstluftwm", "spectrwm", "pekwm", "compiz", "metacity", "kwin",
-  "mutter", "xfwm4", "enlightenment", "river", "cwm", "twm"
+  "mutter", "xfwm4", "enlightenment", "river", "cwm", "twm", "hyprland", "niri"
 ]
 
 proc detectWM(): string =
