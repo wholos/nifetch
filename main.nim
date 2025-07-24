@@ -15,9 +15,16 @@ proc echode() =
    else:
        echo "DE: Unknown DE"
 
+proc echoterminal() =
+   if execProcess("echo $TERM").strip().len > 0:
+       echo "Term: ", execProcess("echo $TERM").strip()
+   else:
+       echo "Term: Unknown terminal"
+
 echo execProcess("whoami").strip(), "@", execProcess("hostname")
 echo "OS: ", getOSName()
 echo "Kernel: ", execProcess("uname").strip(), " ", execProcess("uname -r").strip()
 echo "Shell: ", execProcess("echo $SHELL").strip()
 echode()
 echowm()
+echoterminal()
